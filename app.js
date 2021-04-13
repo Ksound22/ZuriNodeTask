@@ -1,12 +1,12 @@
 const fs = require("fs");
 const fetch = require("node-fetch");
 
-fs.mkdir("jsonDataFolder", (err) => {
+fs.mkdir("result", (err) => {
   if (err) throw err;
   console.log("Folder Created");
 });
 
-fetch("http://jsonplaceholder.typicode.com/posts")
+fetch("http://result.typicode.com/posts")
   .then((res) => res.json())
   .then((data) =>
     fs.writeFile(
