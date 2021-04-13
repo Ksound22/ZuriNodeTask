@@ -10,7 +10,7 @@ fetch("http://jsonplaceholder.typicode.com/posts")
   .then((res) => res.json())
   .then((data) =>
     fs.writeFile(
-      "./jsonDataFolder/result.json",
+      "./jsonDataFolder/posts.json",
       JSON.stringify(data, null, 2),
       (err) => {
         if (err) throw err;
